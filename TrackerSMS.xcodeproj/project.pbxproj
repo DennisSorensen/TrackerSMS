@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		95B69C8B236600CB0038E493 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B69C8A236600CB0038E493 /* AppDelegate.swift */; };
 		95B69C8D236600CB0038E493 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B69C8C236600CB0038E493 /* SceneDelegate.swift */; };
-		95B69C8F236600CB0038E493 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B69C8E236600CB0038E493 /* ViewController.swift */; };
 		95B69C92236600CB0038E493 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95B69C90236600CB0038E493 /* Main.storyboard */; };
 		95B69C94236600CC0038E493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B69C93236600CC0038E493 /* Assets.xcassets */; };
 		95B69C97236600CC0038E493 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95B69C95236600CC0038E493 /* LaunchScreen.storyboard */; };
+		95B69CA0236604A40038E493 /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B69C9F236604A40038E493 /* Tracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		95B69C87236600CB0038E493 /* TrackerSMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackerSMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B69C8A236600CB0038E493 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95B69C8C236600CB0038E493 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		95B69C8E236600CB0038E493 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		95B69C91236600CB0038E493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95B69C93236600CC0038E493 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95B69C96236600CC0038E493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95B69C98236600CC0038E493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95B69C9F236604A40038E493 /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,23 @@
 		95B69C89236600CB0038E493 /* TrackerSMS */ = {
 			isa = PBXGroup;
 			children = (
+				95B69C9E236604900038E493 /* Models */,
 				95B69C8A236600CB0038E493 /* AppDelegate.swift */,
 				95B69C8C236600CB0038E493 /* SceneDelegate.swift */,
-				95B69C8E236600CB0038E493 /* ViewController.swift */,
 				95B69C90236600CB0038E493 /* Main.storyboard */,
 				95B69C93236600CC0038E493 /* Assets.xcassets */,
 				95B69C95236600CC0038E493 /* LaunchScreen.storyboard */,
 				95B69C98236600CC0038E493 /* Info.plist */,
 			);
 			path = TrackerSMS;
+			sourceTree = "<group>";
+		};
+		95B69C9E236604900038E493 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				95B69C9F236604A40038E493 /* Tracker.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95B69C8F236600CB0038E493 /* ViewController.swift in Sources */,
+				95B69CA0236604A40038E493 /* Tracker.swift in Sources */,
 				95B69C8B236600CB0038E493 /* AppDelegate.swift in Sources */,
 				95B69C8D236600CB0038E493 /* SceneDelegate.swift in Sources */,
 			);
@@ -287,6 +295,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9V879PR522;
 				INFOPLIST_FILE = TrackerSMS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9V879PR522;
 				INFOPLIST_FILE = TrackerSMS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
