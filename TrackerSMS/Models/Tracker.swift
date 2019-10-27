@@ -9,5 +9,13 @@
 import Foundation
 
 class Tracker {
+    var phoneNumber : String
+    var messageCommand : String
+    var messageCode : String
     
+    init(phoneNumber: String, messageCommand: String, messageCode: String) {
+        self.phoneNumber = phoneNumber
+        self.messageCommand = messageCommand
+        self.messageCode = messageCode
+    }
 }
