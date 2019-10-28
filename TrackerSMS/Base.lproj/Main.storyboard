@@ -11,7 +11,7 @@
         <!--TrackerSMS-->
         <scene sceneID="jmG-7c-Ce7">
             <objects>
-                <tableViewController id="qod-63-CIs" sceneMemberID="viewController">
+                <tableViewController id="qod-63-CIs" customClass="TrackerTableViewController" customModule="TrackerSMS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MRM-lJ-R0Z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,7 +134,7 @@
         <!--Tilføj Tracker-->
         <scene sceneID="DIQ-vs-0bs">
             <objects>
-                <tableViewController id="IVJ-B9-uGu" sceneMemberID="viewController">
+                <tableViewController id="IVJ-B9-uGu" customClass="AddTrackerTableViewController" customModule="TrackerSMS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="y1R-fb-6HP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
