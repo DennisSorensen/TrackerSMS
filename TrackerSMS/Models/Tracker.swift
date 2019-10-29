@@ -9,35 +9,40 @@
 import Foundation
 
 class Tracker : Codable {
+    var name : String
     var phoneNumber : String
-    var messageCommand : String
     var messageCode : String
     
     //MARK: STATIC
     static let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! //Sti til der hvor man skal gemme dataene
     static let archiveUrl = documentsDirectory.appendingPathComponent("Tracker").appendingPathExtension("plist") //Filen som dataene gemmes i
     
-    init(phoneNumber: String, messageCommand: String, messageCode: String) {
+    init(name: String, phoneNumber: String, messageCode: String) {
+        self.name = name
         self.phoneNumber = phoneNumber
-        self.messageCommand = messageCommand
         self.messageCode = messageCode
+    }
+    
+    init() {
+        self.name = ""
+        self.phoneNumber = ""
+        self.messageCode = ""
     }
     
     //Funktion der tager tracker listen fra app delegate, og gemmer den til disk
     static func saveTrackersToFile() {
         let myEncoder = PropertyListEncoder()
-        let encodedMachines = try? myEncoder.encode(AppDelegate.trackers) //Prøver at encode maskinerne
-        try? encodedMachines?.write(to: archiveUrl, options: .noFileProtection) //Prover at skrive dataene
+        let encodedTrackers = try? myEncoder.encode(AppDelegate.trackers) //Prøver at encode maskinerne
+        try? encodedTrackers?.write(to: archiveUrl, options: .noFileProtection) //Prover at skrive dataene
     }
     
     //Funktion der henter listen af gemte maskiner fra disk
-    static func loadTrackersFromFile() -> [Tracker]? {
+    static func loadTrackersFromFile() {
         let myDecoder = PropertyListDecoder()
         
-        if let recivedMachineData = try? Data(contentsOf: archiveUrl) {
-            let decodedMachines = try? myDecoder.decode(Array<Tracker>.self, from: recivedMachineData)
-            return decodedMachines
+        if let recivedTrackerData = try? Data(contentsOf: archiveUrl) {
+            let decodedTrackers = try? myDecoder.decode(Array<Tracker>.self, from: recivedTrackerData)
+            AppDelegate.trackers = decodedTrackers ?? []
         }
-        return nil
     }
 }
